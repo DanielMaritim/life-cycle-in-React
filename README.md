@@ -10,3 +10,5 @@ It is called once in the component life cycle and it signals that the component 
 
 componentDidUpdate() is called after componentDidMount() and can be useful to perform some action when the state changes.
 componentDidUpdate() takes as its first two arguments the previous props and the previous state.<b>It is invoked everytime the component updates.</b>
+
+3 The componentWillUnmount () method
