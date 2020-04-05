@@ -11,6 +11,29 @@
 <body>
 
     <div id='app'></div> 
+    <script>
+        window.API = {
+            fetchFriends() {
+                return new Promise((res,rej)=>{
+                    const friends = [
+                         {
+                            name:'Jimmy',
+                            active: true,
+                        },
+                        {
+                            name:'peter',
+                            active:true,
+                        },
+                        {
+                            name:'caro',
+                            active:false
+                    }
+                    ]
+                    setTimeout(()=> res (friends),2000)
+                })
+            }
+        }
+    </script>
 
    <script type = 'text/babel'>
    function ActiveFriends (props) {
@@ -50,20 +73,7 @@
         constructor (props) {
             super (props)
             this.state = {
-                friends: [
-                    {
-                        name:'Jimmy',
-                        active: true,
-                    },
-                    {
-                        name:'peter',
-                        active:true,
-                    },
-                    {
-                        name:'caro',
-                        active:false
-                    }
-                ],
+                friends: [],
                 input:'',
             }
 
@@ -77,6 +87,14 @@
 
         componentDidMount() {
             console.log('--componentDidMount--')
+
+            API.fetchFriends ()
+                .then((friends)=> {
+                    this.setState({
+                        friends
+                    })
+                })
+            
         }
         componentDidUpdate () {
             console.log('--componentDidUpdate--')
