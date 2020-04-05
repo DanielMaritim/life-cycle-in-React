@@ -15,3 +15,4 @@ componentDidUpdate() takes as its first two arguments the previous props and the
 
 componentWillUnmount is the last function to be called immediately before the component is removed from the DOM.
 It is generally used to perform clean-up for any DOM-elements or timers created in componentWillMount 
+<b> this method is evoked when the component is being removed,that had been mounted on the DOM </b>
