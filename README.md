@@ -17,3 +17,5 @@ his might happen if new props have been provided by a parent component or an int
 componentWillUnmount is the last function to be called immediately before the component is removed from the DOM.
 It is generally used to perform clean-up for any DOM-elements or timers created in componentWillMount 
 <b> this method is evoked when the component is being removed,that had been mounted on the DOM </b>
+
+Note...
