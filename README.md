@@ -18,4 +18,4 @@ componentWillUnmount is the last function to be called immediately before the co
 It is generally used to perform clean-up for any DOM-elements or timers created in componentWillMount 
 <b> this method is evoked when the component is being removed,that had been mounted on the DOM </b>
 
-Note...
+Note...<b>The componentDidUpdate and other life cycle methods apply only to React Class components. You cannot use them in your Functional components.</b>
